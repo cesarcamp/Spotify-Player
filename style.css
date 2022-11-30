@@ -72,3 +72,8 @@ p {
     font-size: 40px;
     margin-top: 18px;
 }
+
+button {
+    cursor: pointer;
+    border-radius: 50%;
+}
