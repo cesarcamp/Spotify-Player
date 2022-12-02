@@ -12,10 +12,10 @@ html, body {
     height: 350px;
     padding: 20px;
     border-radius: 9px;
-    background-color: #2a2a2a;    
+    background-color: #2a2a2a;
+    overflow: hidden;   
 
     display: flex;
-    justify-content: center;
     align-items: center;
     position: absolute;
     top: 50%;
@@ -28,26 +28,44 @@ img {
     height: 280px;
     width: 280px;
     border-radius: 9px;
+    margin: 20px;
     object-fit: cover;
+    
 }
 
 .elements {
     margin: 0;
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    height: 280px;
+    padding-right: 10px;
 }
 
 .fa-spotify {
     align-self: flex-end;
-    margin-top:-10px;
 }
 
+@keyframes slideInRight {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-150%);
+    }
+  }
+  
 h2 {
     margin: 0;
     font-size: 26px;
-    padding-top: 42px;
+    padding-top: 48px;
     padding-bottom: 28px;
+    white-space: nowrap; /*Single line text*/
+
+    animation-name: slideInRight;
+    animation-duration: 10s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
 }
 
 p {
@@ -56,8 +74,9 @@ p {
     font-size: 18px;
 }
 
-.fa-heart-o {
+.heart {
     color: hsl(0, 0%, 60%);
+    cursor: pointer;
 }
 
 .footer {
@@ -65,15 +84,21 @@ p {
     align-self: flex-end;
     margin:0;
     align-items: center;
-}
-.fa-ellipsis-h {
-    color: hsl(0, 0%, 60%);
-    letter-spacing: 20px;
-    font-size: 40px;
-    margin-top: 18px;
+    padding-top: 40px;
 }
 
-button {
+.fa-ellipsis-h {
+    color: hsl(0, 0%, 60%);
+    font-size: 40px;
+    margin-top: 18px;
+    padding-right: 18px;
+}
+
+.time {
+    margin: 0;
+    padding-right: 18px;
+}
+
+.btn {
     cursor: pointer;
-    border-radius: 50%;
 }
